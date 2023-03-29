@@ -1,0 +1,44 @@
+{
+  "schemaName" : "TestSchemaName",
+  "input" : {
+    "operationSearchPaths" : [
+      "*.graphql"
+    ],
+    "schemaSearchPaths" : [
+      "*.graphqls"
+    ]
+  },
+  "output" : {
+    "testMocks" : {
+      "none" : {
+      }
+    },
+    "schemaTypes" : {
+      "path" : "./",
+      "moduleType" : {
+        "embeddedInTarget" : {
+          "name" : "TestEmbeddedInTarget"
+        }
+      }
+    },
+    "operations" : {
+      "inSchemaModule" : {
+      }
+    }
+  },
+  "schemaDownloadConfiguration": {
+      "downloadMethod": {
+          "introspection": {
+              "endpointURL": "http://192.168.29.119:4000",
+              "httpMethod": {
+                  "POST": {}
+              },
+              "includeDeprecatedInputValues": false,
+              "outputFormat": "SDL"
+          }
+      },
+      "downloadTimeout": 60,
+      "headers": [],
+      "outputPath": "./graphql/"
+  }
+}
